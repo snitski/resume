@@ -1,0 +1,208 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Alexander Snit} \\ \vspace{1pt}
+    \href{mailto:alex@snit.ski}{alex@snit.ski} $|$
+    \href{https://linkedin.com/in/alexander-snit}{linkedin.com/in/alexander-snit} $|$
+    \href{https://github.com/snitski}{github.com/snitski} $|$
+    \href{https://snit.ski}{snit.ski}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {North Atlantic Industries}{Bohemia, NY}
+        {Software Engineer}{August 2024 -- Present}
+        \resumeItemListStart
+            \resumeItem{Manage a hybrid Jenkins infrastructure of custom on-prem hardware and AWS EC2 using Terraform and Ansible, achieving 98\% pipeline uptime and supporting 100+ daily builds for a department of 50+ engineers}
+            \resumeItem{Migrated C projects to CMake, reducing pipeline compilation times by 99.41\%, allowing for CI/CD integration}
+            \resumeItem{Led team initiative to create build-time unit testing for all C/C++ projects in local and CI/CD builds}
+            \resumeItem{Refactored Dockerfiles to minimize on-prem resource contention, reducing total image size by 90\%}
+        \resumeItemListEnd
+
+        \resumeSubSubheading
+        {Software Engineer Intern}{May 2023 -- August 2024}
+        \resumeItemListStart
+            \resumeItem{Overhauled an internal C\# WPF tool to cache repeated outbound API requests, reducing execution times by 30\%}
+            \resumeItem{Created a C\# WPF application to prevent accidental disruptions of regression tests by visualizing hardware status}
+        \resumeItemListEnd
+
+        \resumeSubheading
+        {Stony Brook University Division of Information Technology}{Stony Brook, NY}
+        {Client Support Lead Student Technician}{February 2022 -- May 2024}
+        \resumeItemListStart
+            \resumeItem{Mentored 30+ interns each semester by providing real-time technical guidance during on-site customer support}
+            \resumeItem{Served as the primary student technician for the 50+ staff at Stony Brook University's Office of the President}
+            \resumeItem{Resolved 400+ tickets by explaining complex technical concepts in an accessible manner for students and faculty}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+        {\textbf{Vulnerable Path Checker} $|$ Function-level Vulnerability Triage Research}{August 2023 -- Present}
+        \resumeItemListStart
+            \resumeItem{Pioneered function-level dependency analysis to identify a project's vulnerabilities with greater precision}
+            \resumeItem{Assessed 24,000+ binaries and 510+ CVEs in Debian, reducing reported issues by 30\% via function-level analysis}
+            \resumeItem{Automated function name extraction from Git patches, correlating them with CVE data to improve accuracy}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Step Pets} $|$ Hack@CEWIT '24 “Best in Show” $|$ devpost.com/software/step-pets}{March 2024 -- March 2024}
+        \resumeItemListStart
+            \resumeItem{Integrated accurate cross-platform step tracking with the Apple HealthKit and Google Health Connect APIs}
+            \resumeItem{Designed a multi-page Flutter application with groups, shops, and a character designer to maximize user retention}
+            \resumeItem{Architected a Go backend with OAuth authentication to prevent unauthorized access to user health data}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{Jeux} $|$ Low-Level Multiplayer Game Platform in C}{April 2023 -- April 2023}
+        \resumeItemListStart
+            \resumeItem{Engineered a multi-threaded backend for a two-player game, managing user logins, matchmaking, and elo ratings}
+            \resumeItem{Developed a custom network protocol for client-server communication with reference-counting management}
+        \resumeItemListEnd
+
+        \resumeProjectHeading
+        {\textbf{BinBuddy} $|$ Hack@CEWIT '23 "Spark of Genius" $|$ devpost.com/software/binbuddy}{March 2023 -- March 2023}
+        \resumeItemListStart
+            \resumeItem{Built a React Native app with a Flask backend and a GitHub hosted knowledge base to help users recycle effectively}
+            \resumeItem{Utilized OpenAI's CLIP via Hugging Face transformers to classify user photos of recyclables with 85\% accuracy}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Stony Brook University}{Stony Brook, NY}
+    {Master of Science in Computer Science}{August 2024 -- Expected December 2025}
+    \resumeSubSubheading
+    {Bachelor of Science with Honors in Computer Science (3.9 GPA)}{August 2021 -- May 2024}
+    \resumeItemListStart
+        \resumeItem{\textbf{Relevant Coursework}: Operating Systems, Compiler Design, Computer Networks, Network Security, Data Structures, Algorithms, Programming Abstractions, Object-Oriented Programming, Software Development}
+        \resumeItem{\textbf{Honors}: Summa Cum Laude, Computer Science Honors Program, Tau Beta Pi Engineering Honor Society}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------VOLUNTEER EXPERIENCE-----------
+\section{Volunteer Experience}
+    \resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\textbf{Lindenhurst Launchpad} $|$ Co-Founder, Secretary} {September 2023 -- Present}
+    \resumeItemListStart
+        \resumeItem{Founded a 501(c)(3) non-profit dedicated to empowering local high school students by fostering career exploration and improving access to higher education through mentorship, workshops, and alumni connections}
+    \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Rust, Go, C\#, Java, Python, TypeScript, JavaScript, Bash, HTML, CSS} \\
+     \textbf{Frameworks}{: React, Flutter, Svelte, WPF, Tailwind, Material-UI, Flask, FastAPI, Node.js, .NET, PocketBase} \\
+     \textbf{Developer Tools}{: CMake, Conan, Selenium, Postman, Jira, Git, Linux}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

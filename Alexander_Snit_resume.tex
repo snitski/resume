@@ -101,6 +101,7 @@
 \begin{center}
     \textbf{\Huge Alexander Snit} \\ \vspace{1pt}
     \href{mailto:alex@snit.ski}{alex@snit.ski} $|$
+    (631) 829-2211 $|$
     \href{https://linkedin.com/in/alexander-snit}{linkedin.com/in/alexander-snit} $|$
     \href{https://github.com/snitski}{github.com/snitski} $|$
     \href{https://snit.ski}{snit.ski}
@@ -113,10 +114,11 @@
         {North Atlantic Industries}{Bohemia, NY}
         {Software Engineer}{August 2024 -- Present}
         \resumeItemListStart
-            \resumeItem{Manage a hybrid Jenkins infrastructure of custom on-prem hardware and AWS EC2 using Terraform and Ansible, achieving 98\% pipeline uptime and supporting 100+ daily builds for a department of 50+ engineers}
-            \resumeItem{Migrated C projects to CMake, reducing pipeline compilation times by 99.41\%, allowing for CI/CD integration}
-            \resumeItem{Led team initiative to create build-time unit testing for all C/C++ projects in local and CI/CD builds}
-            \resumeItem{Refactored Dockerfiles to minimize on-prem resource contention, reducing total image size by 90\%}
+            \resumeItem{Manage a hybrid Jenkins infrastructure across on-prem servers and AWS EC2, configuring Linux-based agents with Terraform and Ansible to achieve 98\% pipeline uptime with 100+ daily builds}
+            \resumeItem{Streamlined the software/hardware integration lifecycle by migrating C projects to CMake, cutting pipeline runtimes by 99.41\%, enabling rapid deployment to embedded systems with custom FPGAs}
+            \resumeItem{Engineered a JTAG-over-IP solution with standard Linux tools, allowing developers to remotely flash and debug development hardware connected to a central server}
+            \resumeItem{Led an initiative to integrate build-time unit tests within containerized Linux environments for all C/C++ projects}
+            \resumeItem{Refactored multi-stage Dockerfiles for Linux C/C++ build environments, reducing total image sizes by 90\%}
         \resumeItemListEnd
 
         \resumeSubSubheading
@@ -144,7 +146,7 @@
         \resumeItemListStart
             \resumeItem{Pioneered function-level dependency analysis to identify a project's vulnerabilities with greater precision}
             \resumeItem{Assessed 24,000+ binaries and 510+ CVEs in Debian, reducing reported issues by 30\% via function-level analysis}
-            \resumeItem{Automated function name extraction from Git patches, correlating them with CVE data to improve accuracy}
+            \resumeItem{Automated function name extraction from Git patches with Python, fitting it with CVE data to improve accuracy}
         \resumeItemListEnd
 
         \resumeProjectHeading
@@ -156,16 +158,17 @@
         \resumeItemListEnd
 
         \resumeProjectHeading
-        {\textbf{Jeux} $|$ Low-Level Multiplayer Game Platform in C}{April 2023 -- April 2023}
+        {\textbf{Jeux} $|$ Low-Level Multiplayer Game Platform in C}{April 2023 -- May 2023}
         \resumeItemListStart
-            \resumeItem{Engineered a multi-threaded backend for a two-player game, managing user logins, matchmaking, and elo ratings}
-            \resumeItem{Developed a custom network protocol for client-server communication with reference-counting management}
+            \resumeItem{Developed a multi-threaded server over TCP/IP from scratch in C, directly managing a pool of threads and using mutexes and semaphores to guarantee thread-safe data structures}
+            \resumeItem{Implemented networking logic with Linux sockets, managing client file descriptors and I/O with kernel system calls}
+            \resumeItem{Handled client and server termination gracefully by creating a custom signal handler with \texttt{sigaction()}}
         \resumeItemListEnd
 
         \resumeProjectHeading
         {\textbf{BinBuddy} $|$ Hack@CEWIT '23 "Spark of Genius" $|$ devpost.com/software/binbuddy}{March 2023 -- March 2023}
         \resumeItemListStart
-            \resumeItem{Built a React Native app with a Flask backend and a GitHub hosted knowledge base to help users recycle effectively}
+            \resumeItem{Built a React Native app with a Flask backend and a GitHub-hosted knowledge base to help users recycle effectively}
             \resumeItem{Utilized OpenAI's CLIP via Hugging Face transformers to classify user photos of recyclables with 85\% accuracy}
         \resumeItemListEnd
     \resumeSubHeadingListEnd
@@ -183,16 +186,6 @@
         \resumeItem{\textbf{Honors}: Summa Cum Laude, Computer Science Honors Program, Tau Beta Pi Engineering Honor Society}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
-
-%-----------VOLUNTEER EXPERIENCE-----------
-\section{Volunteer Experience}
-    \resumeSubHeadingListStart
-    \resumeProjectHeading
-    {\textbf{Lindenhurst Launchpad} $|$ Co-Founder, Secretary} {September 2023 -- Present}
-    \resumeItemListStart
-        \resumeItem{Founded a 501(c)(3) non-profit dedicated to empowering local high school students by fostering career exploration and improving access to higher education through mentorship, workshops, and alumni connections}
-    \resumeItemListEnd
-    \resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Skills}
